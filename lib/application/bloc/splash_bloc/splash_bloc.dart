@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 // ignore: depend_on_referenced_packages, unnecessary_import
 import 'package:meta/meta.dart';
-import 'package:passwordgenerator/page_home/screen_home.dart';
+import 'package:passwordgenerator/presentation/page_home/screen_home.dart';
 
 part 'splash_event.dart';
 part 'splash_state.dart';

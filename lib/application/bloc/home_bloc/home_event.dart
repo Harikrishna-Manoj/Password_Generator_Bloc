@@ -9,3 +9,9 @@ class GetPasswordEvent extends HomeEvent {
 
   GetPasswordEvent(this.complexity, this.length);
 }
+
+class AddPasswordToDataBase extends HomeEvent {
+  final PassWordModel data;
+
+  AddPasswordToDataBase(this.data);
+}

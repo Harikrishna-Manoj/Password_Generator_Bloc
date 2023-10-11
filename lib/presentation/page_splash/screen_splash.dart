@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:passwordgenerator/bloc/splash_bloc/splash_bloc.dart';
+import 'package:passwordgenerator/application/bloc/splash_bloc/splash_bloc.dart';
 
 class ScreenSplash extends StatelessWidget {
   const ScreenSplash({super.key});
