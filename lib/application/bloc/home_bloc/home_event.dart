@@ -15,3 +15,9 @@ class AddPasswordToDataBase extends HomeEvent {
 
   AddPasswordToDataBase(this.data);
 }
+
+class CopyPassword extends HomeEvent {
+  final String password;
+
+  CopyPassword(this.password);
+}

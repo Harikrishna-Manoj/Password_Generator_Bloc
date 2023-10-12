@@ -7,7 +7,6 @@ import 'package:passwordgenerator/application/bloc/saved_password_bloc/saved_pas
 import 'package:passwordgenerator/application/bloc/splash_bloc/splash_bloc.dart';
 import 'package:passwordgenerator/domain/model/password_model.dart';
 import 'package:passwordgenerator/infrastructure/db_funcion.dart';
-
 import 'package:passwordgenerator/presentation/page_splash/screen_splash.dart';
 
 void main(List<String> args) async {
@@ -25,7 +24,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // bool isDarkMode;
     return MultiBlocProvider(
         providers: [
           BlocProvider(

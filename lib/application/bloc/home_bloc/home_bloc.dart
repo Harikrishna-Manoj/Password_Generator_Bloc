@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 // ignore: depend_on_referenced_packages
@@ -27,6 +28,10 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       emit(HomeInitial(password: password));
     });
     on<AddPasswordToDataBase>((event, emit) async {
+      if (event.data.password!.isEmpty) {
+        Fluttertoast.showToast(msg: "No password");
+        return;
+      }
       final instanceOfDatabase = PasswordBox.getInstance();
       if (instanceOfDatabase.values
           .any((element) => element.password == event.data.password)) {
@@ -35,6 +40,9 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       }
       await instanceOfDatabase.add(event.data);
       Fluttertoast.showToast(msg: "Saved");
+    });
+    on<CopyPassword>((event, emit) {
+      Clipboard.setData(ClipboardData(text: event.password));
     });
   }
 }

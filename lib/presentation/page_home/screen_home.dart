@@ -199,7 +199,8 @@ class CopyButton extends StatelessWidget {
       icon: const Icon(Icons.copy),
       tooltip: 'Copy',
       onPressed: () {
-        Clipboard.setData(ClipboardData(text: fieldController.text));
+        BlocProvider.of<HomeBloc>(context)
+            .add(CopyPassword(fieldController.text));
         SnackBar snackBar = SnackBar(
             backgroundColor: colourList[index],
             content: const Text(
